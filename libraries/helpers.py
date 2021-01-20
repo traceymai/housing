@@ -3,7 +3,9 @@ import pandas as pd
 import seaborn as sns
 def imp_df(column_names, importances):
     df = pd.DataFrame({'feature': column_names,
-    'feature_importance': importances}).sort_values('feature_importance', ascending = False).reset_index(drop = True)
+                       'feature_importance': importances}) \
+           .sort_values('feature_importance', ascending = False) \
+           .reset_index(drop = True)
     return df
 
 # plotting a feature importance dataframe (horizontal barchart)
